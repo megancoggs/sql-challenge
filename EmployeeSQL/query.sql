@@ -7,8 +7,8 @@ SELECT * FROM salaries
 -- Perform an inner join on the employees table and salaries table; view desired columns
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
 FROM employees
-INNER JOIN salaries ON
-employees.emp_no=salaries.emp_no;
+LEFT JOIN salaries ON
+employees.emp_no = salaries.emp_no;
 
 
 -- #2 List first name, last name, and hire date for employees who were hired in 1986.
@@ -76,4 +76,4 @@ departments.dept_name = 'Development';
 SELECT last_name, COUNT(last_name) as "last_name_count"
 FROM employees
 GROUP BY last_name
-ORDER BY "last_name_account" DESC
+ORDER BY "last_name_account" DESC;
